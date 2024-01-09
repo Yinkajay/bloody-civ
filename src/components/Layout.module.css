@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-container nav,
+.main-container > section {
+  flex-grow: 0;
+}
+
+.main-container footer {
+  margin-top: auto;
+}

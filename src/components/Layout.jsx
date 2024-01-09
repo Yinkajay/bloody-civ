@@ -1,20 +1,15 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import LayoutClasses from './Layout.module.css'
 
-// export default function Layout({ children }) {
-//     <>
-//         <Navbar />
-//         {children}
-//     </>
-// }
 const Layout = ({ children }) => {
     return (
-      <div>
-        <Navbar />
-        {children}
-        <Footer />
-      </div>
+        <main className={LayoutClasses['main-container']}>
+            <Navbar />
+            {children}
+            <Footer />
+        </main>
     );
-  };
-  
-  export default Layout;
+};
+
+export default Layout;

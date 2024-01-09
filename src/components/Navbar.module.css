@@ -1,19 +1,29 @@
 .main-nav {
     background-color: purple;
-    height: 70px;
+    background: #EFEFEF;
+    /* height: 70px; */
     display: flex;
     align-items: center;
-    padding: 1rem;
+    margin: 0 -2rem;
+    padding: 2rem;
 }
 
-.main-nav a {
-    background-color: yellow;
-    padding: 10px;
-    border-radius: 20px;
-    min-width: 50px;
-    display: flex;
-    justify-content: center;
-}
+    .main-nav a.active-link{
+        background-color: black;
+        color: white;
+        border: none;
+    }
+
+    .main-nav a {
+        padding: 10px;
+        border-radius: 20px;
+        min-width: 50px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        color: black;
+        border: 1px solid;
+    }
 
 .main-nav a:hover{
     color: gray;
