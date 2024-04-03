@@ -1,0 +1,58 @@
+.loader {
+    background-color: red;
+    height: 100%;
+    margin: 0 -2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.loader img {
+    width: 400px;
+}
+
+.loader p {
+    position: absolute;
+    color: gold;
+}
+
+ .loader p:first-of-type{
+    top: 4rem;
+    left: 4rem;
+}
+.loader p:nth-of-type(2) {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4rem
+}
+
+.loader p:nth-of-type(3) {
+    right: 4rem;
+    top: 4rem
+}
+
+.loader p:nth-of-type(4) {
+    top: 50%;
+    left: 7rem;
+}
+
+.loader p:nth-of-type(5) {
+    top: 24%;
+    right: 7rem;
+}
+
+.loader p:nth-of-type(6) {
+    top: 70%;
+    left: 5rem;
+}
+
+.loader p:nth-of-type(7) {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%;
+}
+
+.loader p:last-of-type {
+    top: 65%;
+    right: 5rem; 
+}

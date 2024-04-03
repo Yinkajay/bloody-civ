@@ -1,27 +1,52 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --grey-text: #929292;
 }
 
-a{
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  padding: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+a {
   text-decoration: none;
   color: inherit;
 }
 
-html, body{
+html,
+body {
   min-height: 100vh;
 }
 
-body{
+body {
   position: relative;
   padding: 0 2rem;
 }
 
-#__next{
+#__next {
   height: 100vh;
 }
 
-main{
+main {
   height: 100%;
+}
+
+iframe {
+  border-radius: 30px;
+
 }

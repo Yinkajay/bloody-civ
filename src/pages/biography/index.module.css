@@ -1,0 +1,9 @@
+.mainHeader{
+    background-color: red;
+}
+
+.mainHeader h2{
+    width: 60%;
+    background-color: lightblue;
+    /* font-size: 5rem; */
+}

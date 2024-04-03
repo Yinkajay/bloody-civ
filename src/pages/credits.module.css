@@ -1,0 +1,61 @@
+.credits article h1{
+ font-size: 96px;
+}
+
+.credits article p {
+    font-size: 40px;
+    width: 500px;
+    color: #929292;
+}
+
+.magicians{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.magicians > div{
+    border: 6px solid;
+    margin: 0 1rem;
+    width: 500px;
+    height: 620px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.magicians h1{
+    font-size: 72px;
+}
+
+.magicians p{
+    font-size: 48px;
+    color: #929292;
+
+}
+
+.links{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.links a {
+    margin: 0 10px;
+}
+
+.tools{
+    margin: 10rem 0;
+    display: flex;
+}
+
+.tools h1{
+    font-size: 88px;
+}
+
+.tools p{
+    font-size: 40px;
+    color: #929292;
+    width: 650px;
+}

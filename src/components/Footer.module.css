@@ -4,11 +4,11 @@
 .top-area{
     display: flex;
     width: 100%;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .top-left-area{
-    padding: 20px 0;
+    font-size: 30px;
 }
 
 .top-left-area img{
@@ -21,29 +21,38 @@
 
 .top-middle-area{
 position: relative;
-background-color: brown;
+/* background-color: brown; */
 width: 40%;
+padding: 60px 0;
 }
+
 
 .top-middle-area section:nth-of-type(1) a{
     display: block;
-    background-color: purple;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    /* background-color: purple; */
 }
 
 .top-middle-area section:nth-of-type(2) {
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
+    padding-left: 2rem;
 }
 
 .main-footer > p {
     text-align: center;
     display: block;
-    padding: 20px 0;
-    background-color: grey;
+    padding: 3rem 0;
+    font-size: 24px;
+    color: var(--grey-text);
+    /* background-color: grey; */
 }
 
 .top-right-area{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 60px;
 }

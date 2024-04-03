@@ -12,6 +12,7 @@
         background-color: black;
         color: white;
         border: none;
+        text-decoration: line-through;
     }
 
     .main-nav a {
@@ -23,6 +24,7 @@
         background-color: white;
         color: black;
         border: 1px solid;
+        letter-spacing: 2px;
     }
 
 .main-nav a:hover{
