@@ -22,6 +22,8 @@ export default function credits() {
             </article>
 
             <section className={classes.magicians}>
+                <Image src={trophy} alt='trophy image' />
+
                 <div>
                     <h1>Direction & Design</h1>
                     <Image src={gauntlet} alt='infinity gauntlet' />
@@ -35,6 +37,7 @@ export default function credits() {
                         </Link>
                     </div>
                 </div>
+
                 <div>
                     <h1>Design & Motion</h1>
                     <Image src={spidermen} alt='spidermen' />
@@ -60,6 +63,7 @@ export default function credits() {
                             <Image src={linkedin} alt='linkedin icon' />
                         </Link>
                     </div>
+
                 </div>
             </section>
 

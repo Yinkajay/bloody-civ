@@ -4,15 +4,19 @@ import Image from 'next/image'
 import BiographyStyles from './index.module.css'
 
 import bioImage from '../../../assets/biography/bioPicture.svg'
+import megaphone from '../../../assets/biography/megaphone.svg'
 
 export default function biography() {
   return (
     <section>
 
-      <header className={BiographyStyles.mainHeader}>
+      <header className={BiographyStyles.hero}>
         <h2>EMOSEH KHAMOFU, BLOODY CIVILIAN</h2>
-        <Image src={bioImage}  />
-        <p></p>
+        <div className={BiographyStyles.heroImageArea}>
+          <Image src={bioImage} className={BiographyStyles.firstHeroImage} />
+          <Image src={megaphone} className={BiographyStyles.secondHeroImage} />
+        </div>
+        <p>Nigerian singer-songwriter <br /> and record producer</p>
       </header>
 
       <div>

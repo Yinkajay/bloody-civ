@@ -1,9 +1,45 @@
-.mainHeader{
-    background-color: red;
+.hero{
+    /* background-color: red; */
 }
 
-.mainHeader h2{
+.hero h2{
     width: 60%;
-    background-color: lightblue;
-    /* font-size: 5rem; */
+    /* background-color: lightblue; */
+    font-size: 70px;
+    margin-bottom: 2rem;
+}
+
+
+.heroImageArea{
+    /* display: none; */
+    /* background-color: blue; */
+    position: relative;
+    display: inline-block;
+}
+
+.secondHeroImage{
+    position: absolute;
+    right: -40%;
+    top: -6%;
+    animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1); /* Slightly enlarge the image */
+      opacity: 0.7; /* Reduce opacity */
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+.hero p{
+    color: #929292;
+    font-size: 40px;
 }

@@ -31,6 +31,7 @@ import BloodyClones from '../../assets/playground/BloodyGuitarClone.svg'
 
 
 import imageDummy from '../../assets/playground/imagedummy.svg'
+import Typewriter from 'typewriter-effect'
 
 export default function playground() {
 
@@ -41,7 +42,21 @@ export default function playground() {
       {/* Hero Section */}
       <header className={classes.hero}>
         <div className={classes.heroTextArea}>
-          <h1>Making Beats, Barz, and Beatingss</h1>
+          <h1>
+            Making&nbsp;
+            <Typewriter
+              options={{
+                strings: [
+                  "Beats",
+                  "Barz",
+                  "Beatings"
+                ],
+                autoStart: true,
+                loop: true
+              }}
+            />
+          </h1>
+          {/* <h1>Making Beats, Barz, and Beatingss</h1> */}
         </div>
         <div className={classes.heroImageArea}>
           <Image src={heroImage} width="auto" alt='hero-img' />
@@ -126,9 +141,8 @@ export default function playground() {
         <h1>See for yourself..</h1>
         <div className="">
           <Image src={imageDummy} alt='image-placeholder' />
-
           <iframe
-          className={classes.iframeContainer}
+            className={classes.iframeContainer}
             src="https://www.youtube.com/embed/dZQ8Y-to83Y"
             title="YouTube video player"
             frameborder="0"
@@ -147,7 +161,7 @@ export default function playground() {
           <Image src={RopePic2} alt='bloody civ holding a rope' />
         </div>
         {/* <div className=""> */}
-          <Image src={BloodyClones} alt='bloody holding a guitar' />
+        <Image src={BloodyClones} alt='bloody holding a guitar' />
         {/* </div> */}
       </section>
 
