@@ -1,8 +1,8 @@
-.hero{
+.hero {
     /* background-color: red; */
 }
 
-.hero h2{
+.hero h2 {
     width: 60%;
     /* background-color: lightblue; */
     font-size: 70px;
@@ -10,36 +10,62 @@
 }
 
 
-.heroImageArea{
+.heroImageArea {
     /* display: none; */
     /* background-color: blue; */
     position: relative;
     display: inline-block;
 }
 
-.secondHeroImage{
+.secondHeroImage {
     position: absolute;
     right: -40%;
     top: -6%;
-    animation: pulse 1.5s infinite; 
+    animation: pulse 1.8s infinite;
 }
 
 @keyframes pulse {
     0% {
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
-    50% {
-      transform: scale(1.1); /* Slightly enlarge the image */
-      opacity: 0.7; /* Reduce opacity */
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
 
-.hero p{
+    50% {
+        transform: scale(1.1);
+        /* Slightly enlarge the image */
+        opacity: 0.8;
+        /* Reduce opacity */
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hero p {
     color: #929292;
     font-size: 40px;
+}
+
+.videoArea img {
+    width: 100%;
+}
+
+.videoArea p {
+    color: #929292;
+    font-size: 32px;
+}
+
+.preVisuals{
+    margin: 2rem 0;
+}
+
+.preVisuals h2{
+font-size: 70px;
+}
+
+.preVisuals p {
+    color: #929292;
+    font-size: 32px;
 }
