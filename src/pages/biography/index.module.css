@@ -69,3 +69,58 @@ font-size: 70px;
     color: #929292;
     font-size: 32px;
 }
+
+.visuals{
+    position: relative;
+    border: 5px solid ;
+    padding: 0.5rem 0;
+    border-radius: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.visualslider{
+    /* border: 2px solid blue; */
+    margin: 0.5rem 0;
+    display: flex;
+}
+
+.visualslider p{
+    /* display: none; */
+    /* margin-right: 20px; */
+    font-size: 50px;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 6px 12px;
+    border-radius: 50px;
+    white-space: nowrap;
+    animation: slide 1s linear infinite;
+}
+
+.visualslider::before, 
+.visualslider::after {
+  content: attr(data-repeat);
+}
+
+
+.slideshow{
+    height: 300px;
+    width: 100%;
+    border: 3px solid red2;
+}
+
+@keyframes slide {
+    0% {
+      transform: translateX(0); /* Start at the beginning */
+    }
+    100% {
+      transform: translateX(-100%); /* Move entire width to the left */
+    }
+  } 
+
+
+
+  .outro{
+    color: #929292;
+    font-size: 32px;
+  }

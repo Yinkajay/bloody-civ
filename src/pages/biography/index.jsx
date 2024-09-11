@@ -43,7 +43,7 @@ export default function biography() {
           <Image src={Pencil} />
         </div>
         <div>
-          <Image  />
+          <Image />
           <Image />
         </div>
       </div>
@@ -54,6 +54,41 @@ export default function biography() {
         <p>Her repertoire grew quickly, with the help of Audacity, where a 12-year-old Bloody Civilian began studying music production, which has now evolved into a stunning self-produced debut single “How To Kill A Man.”</p>
       </div>
 
+      <div className={BiographyStyles.visuals}>
+        <div className={BiographyStyles.visualslider}>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+          <p>Visuals</p>
+        </div>
+        <div className={BiographyStyles.slideshow}>
+          <Image />
+        </div>
+      </div>
+
+
+      <div className={BiographyStyles.outro}>
+        <p>A storyteller before anything, a driving force of Bloody Civilian’s work is to empower and platform African art. Bloody Civilian hopes that her career will be marked by her distinct dedication to uplifting her African culture and heritage in every space she encounters.</p>
+      </div>
 
 
     </section>
