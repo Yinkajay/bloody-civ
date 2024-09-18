@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import BiographyStyles from './index.module.css'
@@ -13,7 +13,24 @@ import Instagram from '../../../assets/biography/Instagram.svg'
 import Twitter from '../../../assets/biography/Twitter.svg'
 import Pencil from '../../../assets/biography/Pencil.svg'
 
+import slide1 from '../../../assets/biography/slide1.svg'
+import slide2 from '../../../assets/biography/slide2.webp'
+
 export default function biography() {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [slide1, slide2]; // Add more images as needed
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+      );
+    }, 1000); // Change slide every 3 seconds
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+
   return (
     <section>
 
@@ -43,7 +60,6 @@ export default function biography() {
           <Image src={Pencil} />
         </div>
         <div>
-          <Image />
           <Image />
         </div>
       </div>
@@ -81,6 +97,18 @@ export default function biography() {
           <p>Visuals</p>
         </div>
         <div className={BiographyStyles.slideshow}>
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`${BiographyStyles.slide} ${index === currentSlide ? BiographyStyles.active : ''}`}
+              style={{
+                opacity: index === currentSlide ? 1 : 0,
+                transition: 'opacity 1s ease-in-out',
+              }}
+            >
+              <Image src={slide} alt={`Slide ${index + 1}`} />
+            </div>
+          ))}
           <Image />
         </div>
       </div>

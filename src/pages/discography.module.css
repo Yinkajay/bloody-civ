@@ -1,0 +1,46 @@
+.discographyHero h2 {
+    font-size: 70px;
+    /* background-color: red; */
+}
+
+.servicesHeader {
+    display: flex;
+    align-items: center;
+}
+
+.discographyHero p {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #929292;
+}
+
+
+.albumCard {
+    max-width: 40rem;
+    width: max-content;
+    border: 3px solid;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.albumImage{
+    width: 500px; 
+    /* height: 500px; */
+    margin: 0;
+
+}
+
+.albumText{
+    width: max-content;
+}
+
+.headphonesImage {
+    position: absolute;
+    display: none;
+    width: 100px;
+    left: 0;
+    top: 0;
+}

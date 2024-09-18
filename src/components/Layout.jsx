@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import LayoutClasses from './Layout.module.css'
 import { useEffect, useState } from "react";
-import LoaderScreen from "./LoaderScreen";
+import LoaderScreen from "./Loaders/LoaderScreen";
 
 const Layout = ({ children }) => {
     const [loading, setLoading] = useState(false);

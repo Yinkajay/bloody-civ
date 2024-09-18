@@ -57,12 +57,12 @@
     font-size: 32px;
 }
 
-.preVisuals{
+.preVisuals {
     margin: 2rem 0;
 }
 
-.preVisuals h2{
-font-size: 70px;
+.preVisuals h2 {
+    font-size: 70px;
 }
 
 .preVisuals p {
@@ -70,22 +70,22 @@ font-size: 70px;
     font-size: 32px;
 }
 
-.visuals{
+.visuals {
     position: relative;
-    border: 5px solid ;
+    border: 5px solid;
     padding: 0.5rem 0;
     border-radius: 40px;
     width: 100%;
     overflow: hidden;
 }
 
-.visualslider{
+.visualslider {
     /* border: 2px solid blue; */
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 2rem 0;
     display: flex;
 }
 
-.visualslider p{
+.visualslider p {
     /* display: none; */
     /* margin-right: 20px; */
     font-size: 50px;
@@ -97,30 +97,58 @@ font-size: 70px;
     animation: slide 1s linear infinite;
 }
 
-.visualslider::before, 
+.visualslider::before,
 .visualslider::after {
-  content: attr(data-repeat);
+    content: attr(data-repeat);
 }
 
 
-.slideshow{
-    height: 300px;
-    width: 100%;
-    border: 3px solid red2;
-}
 
 @keyframes slide {
     0% {
-      transform: translateX(0); /* Start at the beginning */
+        transform: translateX(0);
+        /* Start at the beginning */
     }
+
     100% {
-      transform: translateX(-100%); /* Move entire width to the left */
+        transform: translateX(-100%);
+        /* Move entire width to the left */
     }
-  } 
+}
+
+.slideshow {
+    border: 3px solid red;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height:600px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* Fade in/out effect */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Adjust to fit the container */
+}
+
+.active {
+    opacity: 1;
+}
 
 
-
-  .outro{
+.outro {
     color: #929292;
     font-size: 32px;
-  }
+}
