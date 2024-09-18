@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import imagesmash from '../../assets/loader/Imagemash.svg'
+import imagesmash from '../../../assets/loader/Imagemash.svg'
 
 import LoaderStyles from './LoaderScreen.module.css'
 
@@ -15,6 +15,9 @@ export default function LoaderScreen() {
             <p>wake up</p>
             <p>how to kill a man</p>
             <p>mad apology</p>
+            <div className={LoaderStyles.progressBar}>
+                
+            </div>
         </section>
     )
 }

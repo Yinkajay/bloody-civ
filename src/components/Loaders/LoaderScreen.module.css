@@ -1,10 +1,13 @@
 .loader {
-    background-color: red;
-    height: 100%;
+    /* background-color: red; */
+    /* background-color: #efefef; */
+    max-height: 100%;
+    overflow: hidden;
     margin: 0 -2rem;
     position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .loader img {
@@ -13,13 +16,15 @@
 
 .loader p {
     position: absolute;
-    color: gold;
+    color: #929292;
+    /* color: gold; */
 }
 
- .loader p:first-of-type{
+.loader p:first-of-type {
     top: 4rem;
     left: 4rem;
 }
+
 .loader p:nth-of-type(2) {
     left: 50%;
     transform: translateX(-50%);
@@ -54,5 +59,59 @@
 
 .loader p:last-of-type {
     top: 65%;
-    right: 5rem; 
+    right: 5rem;
+}
+
+.loader img {
+    animation: vibrate 1.4s infinite linear;
+    margin: 0 auto;
+}
+
+.progressBar {
+    height: 10px;
+    animation: fillBar 2.8s linear forwards;
+}
+
+@keyframes fillBar {
+    0% {
+        background-color: white;
+        width: 0%;
+    }
+
+    20% {
+        background-color: #353535;
+        width: 20%;
+    }
+
+    60% {
+        background-color: #353535;
+        width: 60%;
+    }
+
+    100%{
+        background-color: #353535;
+        width: 100%;
+    }
+}
+
+
+
+
+@keyframes vibrate {
+    0% {
+        transform: scale(1);
+    }
+    
+
+    25% {
+        transform: scale(1.2) rotate(-20deg);
+    }
+
+    75% {
+        transform: scale(0.8) rotate(20deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
