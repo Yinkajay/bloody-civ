@@ -16,8 +16,7 @@ import Pencil from '../../../assets/biography/Pencil.svg'
 import slide1 from '../../../assets/biography/slide1.svg'
 import slide2 from '../../../assets/biography/slide2.webp'
 
-export default function biography() {
-
+export default function Biography() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [slide1, slide2]; // Add more images as needed
 
