@@ -9,7 +9,7 @@ import heroCube3 from '../../assets/playground/herocube3.png'
 import heroCube4 from '../../assets/playground/herocube4.png'
 
 import AngMgmtLogo from '../../assets/playground/AngerManagement.svg'
-import YoutubeIcon from '../../assets/playground/YouTube.svg'
+import YoutubeLogo from '../../assets/playground/YouTube.svg'
 import GuitarImage from '../../assets/playground/Guitar.svg'
 import SpotifyIcon from '../../assets/playground/Spotify.svg'
 import BloodyCar from '../../assets/playground/BloodySitting.svg'
@@ -93,7 +93,7 @@ export default function playground() {
           <Image src={AngMgmtLogo} alt='album-icon' />
         </div>
         <div className="">
-          <Image src={YoutubeIcon} alt='yt-icon' />
+          <Image src={YoutubeLogo} alt='yt-icon' />
         </div>
         <div className="">
           <Image src={GuitarImage} alt='bloody-civ' />
