@@ -9,7 +9,7 @@ import heroCube3 from '../../assets/playground/herocube3.png'
 import heroCube4 from '../../assets/playground/herocube4.png'
 
 import AngMgmtLogo from '../../assets/playground/AngerManagement.svg'
-import YoutubeLogo from '../../assets/playground/YouTube.svg'
+import YoutubeLogo from '../../assets/playground/Youtube.svg'
 import GuitarImage from '../../assets/playground/Guitar.svg'
 import SpotifyIcon from '../../assets/playground/Spotify.svg'
 import BloodyCar from '../../assets/playground/BloodySitting.svg'
