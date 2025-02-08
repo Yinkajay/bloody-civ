@@ -1,3 +1,8 @@
+.splide__arrow svg {
+    display: none; /* Hides the default arrows */
+  }
+  
+
 .discographyHero h2 {
     font-size: 70px;
     /* background-color: red; */
