@@ -37,6 +37,36 @@ export default function discography() {
     ]
 
     const singlesandFeatures = [
+        {
+            image: AngerManagement,
+            title: 'BLOOD ON THE DANCE FLOOR',
+            year: '2023',
+            links: []
+        },
+        {
+            image: AngerManagement,
+            title: 'Mad Apology',
+            year: '2023',
+            links: []
+        },
+        {
+            image: AngerManagement,
+            title: 'Escapism',
+            year: '2023',
+            links: []
+        },
+        {
+            image: AngerManagement,
+            title: 'How To Kill A Man',
+            year: '2023',
+            links: []
+        },
+        {
+            image: AngerManagement,
+            title: 'Wake Up',
+            year: '2023',
+            links: []
+        },
 
     ]
 
@@ -57,9 +87,9 @@ export default function discography() {
                 <p>One of the best in the game, <br /> don’t believe play a tape.</p>
             </div>
 
-            <div className="">
+            <div className={discographyStyles.albums}>
                 <h2>Albums & EPs</h2>
-                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ gap: '', pagination: false }}
+                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0 }}
                 >
                     <SplideTrack>
                         {albums.map((album, index) => (
@@ -89,7 +119,7 @@ export default function discography() {
                     </SplideTrack>
 
                     <div className={`splide__arrows ${discographyStyles.arrowsContainer}`}>
-                    <button className="splide__arrow splide__arrow--next">
+                        <button className="splide__arrow splide__arrow--next">
                             <Image width={120} src={backward} />
                         </button>
                         <button className="splide__arrow splide__arrow--prev">
@@ -99,8 +129,46 @@ export default function discography() {
                 </Splide>
             </div>
 
-            <div className="">
+            <div className={discographyStyles.singles}>
                 <h2>Singles & Featuress</h2>
+                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0 }}
+                >
+                    <SplideTrack>
+                        {singlesandFeatures.map((album, index) => (
+                            <SplideSlide>
+                                <div key={index} className={discographyStyles.albumCard}>
+                                    <div className="">
+                                        <Image src={album.image} width={500} className={discographyStyles.albumImage} alt='anger management' />
+                                        <div className={discographyStyles.albumText}>
+                                            <div className={discographyStyles.albumYear}>
+                                                <p>Album</p>
+                                                <p>{album.year}</p>
+                                            </div>
+                                            <h1>{album.title}</h1>
+                                        </div>
+                                    </div>
+                                    <Image src={headphones} className={discographyStyles.headphonesImage} alt='headphones' />
+                                    <div className="">
+                                        <Image src={spotify} alt='spotify' />
+                                        <Image src={youtube} alt='youtube' />
+                                        <Image src={tidal} alt='tidal' />
+                                        <Image src={soundcloud} alt='soundcloud' />
+                                        <Image src={deezer} alt='deezer' />
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                        ))}
+                    </SplideTrack>
+
+                    <div className={`splide__arrows ${discographyStyles.arrowsContainer}`}>
+                        <button className="splide__arrow splide__arrow--next">
+                            <Image width={120} src={backward} />
+                        </button>
+                        <button className="splide__arrow splide__arrow--prev">
+                            <Image width={120} src={forward} />
+                        </button>
+                    </div>
+                </Splide>
             </div>
         </section>
     )

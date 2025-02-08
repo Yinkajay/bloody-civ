@@ -3,10 +3,12 @@
     /* Hides the default arrows */
 }
 
+.discographyHero{
+    margin-bottom: 100px;
+}
 
 .discographyHero h2 {
     font-size: 70px;
-    /* background-color: red; */
 }
 
 .servicesHeader {
@@ -19,6 +21,11 @@
     align-items: center;
     font-size: 40px;
     color: #929292;
+}
+
+.albums h2{
+    font-size: 70px;
+    margin: 30px 0;
 }
 
 .albumsCarousel {
@@ -81,21 +88,11 @@
 
 .headphonesImage {
     position: absolute;
-    display: none;
-    width: 100px;
-    left: 0;
-    top: 0;
+    /* display: none; */
+    width: 350px;
+    right: 20%;
+    top: -50px;
 }
-
-/* .arrowsContainer {
-    padding: 25px;
-    background-color: blue;
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
-    margin-top: 20px;
-    position: relative; 
-  } */
 
   .arrowsContainer {
     display: flex;
@@ -111,3 +108,12 @@
   }
   
 
+
+  .singles{
+    margin: 100px 0;
+  }
+
+  .singles h2{
+    font-size: 70px;
+    margin: 30px 0;
+  }
