@@ -12,8 +12,9 @@ import backward from '../../assets/discography/backward.svg'
 
 import headphones from '../../assets/discography/headphones.svg'
 import AngerManagement from '../../assets/discography/AngerManagement.svg'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
-import "@splidejs/splide/css"; 
+import Atleastwetried from '../../assets/discography/atleastwetried.svg'
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
+import "@splidejs/splide/css";
 
 
 
@@ -28,11 +29,15 @@ export default function discography() {
             links: [],
         },
         {
-            image: AngerManagement,
+            image: Atleastwetried,
             title: 'Anger Management: At LEasT wE tRIED',
             year: '2023',
             links: []
         }
+    ]
+
+    const singlesandFeatures = [
+
     ]
 
     return (
@@ -54,47 +59,44 @@ export default function discography() {
 
             <div className="">
                 <h2>Albums & EPs</h2>
-                {/* <Splide options={{gap:'1rem'}}>
-                    {albums.map((album, index) => (
-                        <SplideSlide>
-                            <div key={index} className={discographyStyles.albumCard}>
-                                <Image src={headphones} className={discographyStyles.headphonesImage} alt='headphones' />
-                                <Image src={AngerManagement} className={discographyStyles.albumImage} alt='anger management' />
-                                <div className={discographyStyles.albumText}>
-                                    <p>Album</p>
-                                    <p>{album.year}</p>
-                                    <h1>{album.title}</h1>
+                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ gap: '', pagination: false }}
+                >
+                    <SplideTrack>
+                        {albums.map((album, index) => (
+                            <SplideSlide>
+                                <div key={index} className={discographyStyles.albumCard}>
+                                    <div className="">
+                                        <Image src={album.image} width={500} className={discographyStyles.albumImage} alt='anger management' />
+                                        <div className={discographyStyles.albumText}>
+                                            <div className={discographyStyles.albumYear}>
+                                                <p>Album</p>
+                                                <p>{album.year}</p>
+                                            </div>
+                                            <h1>{album.title}</h1>
+                                        </div>
+                                    </div>
+                                    <Image src={headphones} className={discographyStyles.headphonesImage} alt='headphones' />
+                                    <div className="">
+                                        <Image src={spotify} alt='spotify' />
+                                        <Image src={youtube} alt='youtube' />
+                                        <Image src={tidal} alt='tidal' />
+                                        <Image src={soundcloud} alt='soundcloud' />
+                                        <Image src={deezer} alt='deezer' />
+                                    </div>
                                 </div>
-                            </div>
-                        </SplideSlide>
-                    ))}
-                </Splide> */}
-                <Splide options={{ perPage: '' }}>
-                    <SplideSlide>
-                        <Image src={AngerManagement} width={500} alt="" />
-                    </SplideSlide>
-                    
-                    <SplideSlide>
-                        <Image src={spotify} width={500} alt="" />
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Image src={youtube} width={500} alt="" />
-                    </SplideSlide>
-                    <SplideSlide>
-                        <Image src={soundcloud} width={500} alt="" />
-                    </SplideSlide>
-                </Splide>
-                {/* {albums.map((album, index) => (
-                    <div key={index} className={discographyStyles.albumCard}>
-                        <Image src={headphones} className={discographyStyles.headphonesImage} alt='headphones' />
-                        <Image src={AngerManagement} className={discographyStyles.albumImage} alt='anger management' />
-                        <div className={discographyStyles.albumText}>
-                            <p>Album</p>
-                            <p>{album.year}</p>
-                            <h1>{album.title}</h1>
-                        </div>
+                            </SplideSlide>
+                        ))}
+                    </SplideTrack>
+
+                    <div className={`splide__arrows ${discographyStyles.arrowsContainer}`}>
+                    <button className="splide__arrow splide__arrow--next">
+                            <Image width={120} src={backward} />
+                        </button>
+                        <button className="splide__arrow splide__arrow--prev">
+                            <Image width={120} src={forward} />
+                        </button>
                     </div>
-                ))} */}
+                </Splide>
             </div>
 
             <div className="">
