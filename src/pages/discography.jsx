@@ -84,7 +84,7 @@ export default function discography() {
                     </div>
                 </div>
                 <h2>BLOODY CIVILIAN</h2>
-                <p>One of the best in the game, <br /> don’t believe play a tape.</p>
+                <p>One of the best in the game, <br /> don’t believe, play a tape.</p>
             </div>
 
             <div className={discographyStyles.albums}>

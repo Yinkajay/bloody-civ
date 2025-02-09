@@ -138,6 +138,7 @@
         top: -250px;
     }
 
+
     .magicians p {
         font-size: 25px;
     }
@@ -166,6 +167,10 @@
         flex-direction: column;
     }
 
+    .tools h1{
+        font-size: 65px;
+    }
+
     .tools p {
         width: 100%;
     }
@@ -178,10 +183,6 @@
 }
 
 @media screen and (min-width:650px)and (max-width:850px) {
-    .magicians div{
-
-    }
-
     .magicians h1 {
         font-size: 35px;
     }
