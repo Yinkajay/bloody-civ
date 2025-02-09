@@ -712,21 +712,22 @@ export const fetchYouTubeMusicData = async () => {
 };
 
 export const fetchYoutubeVlogData = async () => {
-  try {
-    const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-      params: {
-        part: 'snippet',
-        q: 'bloody civilian vlogs and live videos ',
-        maxResults: 10,
-        key: API_KEY,
-        type: 'video'
-      },
-    });
-    return response.data.items
-    // return response.data.items;
-  } catch (error) {
-    console.log('Error fetching YouTube data:', error);
-    return [];
-  }
+  return youtubeVlogDataResponse
+  // try {
+  //   const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
+  //     params: {
+  //       part: 'snippet',
+  //       q: 'bloody civilian vlogs and live videos ',
+  //       maxResults: 10,
+  //       key: API_KEY,
+  //       type: 'video'
+  //     },
+  //   });
+  //   return response.data.items
+  //   // return response.data.items;
+  // } catch (error) {
+  //   console.log('Error fetching YouTube data:', error);
+  //   return [];
+  // }
 }
 

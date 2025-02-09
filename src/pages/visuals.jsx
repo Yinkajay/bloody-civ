@@ -12,7 +12,7 @@ import { fetchYouTubeMusicData, fetchYoutubeVlogData } from "@/utils/fetchYoutub
 export async function getStaticProps() {
     // Fetch YouTube data for both music and vlogs at build time
     const musicVideos = await fetchYouTubeMusicData();
-    // const vlogVideos = await fetchYoutubeVlogData();
+    const vlogVideos = await fetchYoutubeVlogData();
 
     console.log(musicVideos)
 
@@ -20,7 +20,7 @@ export async function getStaticProps() {
     return {
         props: {
             musicVideos,
-            // vlogVideos,
+            vlogVideos,
         },
         // Optional: revalidate every 24 hours (or other time interval in seconds)
         revalidate: 86400, // 24 hours in seconds
@@ -30,7 +30,7 @@ export async function getStaticProps() {
 
 export default function visuals({ musicVideos, vlogVideos }) {
     console.log('Music Videos:', musicVideos);
-    // console.log('Vlog Videos:', vlogVideos);
+    console.log('Vlog Videos:', vlogVideos);
     return (
         <section>
             <section>
@@ -40,7 +40,7 @@ export default function visuals({ musicVideos, vlogVideos }) {
                 <p></p>
             </section>
 
-            <section>
+            <section className={visualStyles.videos}>
                 <h2>Music Videos</h2>
                 <Splide className={visualStyles.mvCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus: 0 }}
                 >
@@ -90,9 +90,45 @@ export default function visuals({ musicVideos, vlogVideos }) {
 
             <section className={visualStyles.vlogs}>
                 <h1>Vlog & Live</h1>
-                <div className="">
-
-                </div>
+                <Splide className={visualStyles.mvCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus: 0 }}
+                >
+                    <SplideTrack>
+                        {vlogVideos.map(video => (
+                            <SplideSlide key={video.etag}>
+                                <div className={visualStyles.mvCard}>
+                                    <div className={visualStyles.titleSlider}>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                    </div>
+                                    <div className={visualStyles.mvCardVideo}>
+                                        <iframe
+                                            src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                                            title={video.snippet.title}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                        {/* <Image width={1000} height={700} src={video.snippet.thumbnails.high.url} alt="youtube video thumbnail" /> */}
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                        ))}
+                    </SplideTrack>
+                    <div className={`splide__arrows ${visualStyles.arrowsContainer}`}>
+                        <button className="splide__arrow splide__arrow--next">
+                            <Image width={120} src={backward} />
+                        </button>
+                        <button className="splide__arrow splide__arrow--prev">
+                            <Image width={120} src={forward} />
+                        </button>
+                    </div>
+                </Splide>
             </section>
         </section>
     )
