@@ -1,14 +1,14 @@
 .mvCard {
     background-color: white;
     margin: 1rem 0;
-    border-radius: 10px;
+    border-radius: 100px;
     border: 5px solid;
     padding: 1rem;
     overflow: hidden;
 }
 
 .mvCardVideo{
-    border: 5px solid ;
+    /* border: 5px solid ; */
     border-radius: 10px;
 }
 
@@ -16,10 +16,10 @@
     width: 100%;
     height: 800px;
 }
-/* .mvCardVideo img{
+.mvCardVideo img{
     width: 100%;
     height: 800px;
-} */
+}
 
 
 .visuals {
@@ -55,6 +55,22 @@
     content: attr(data-repeat);
 }
 
+.arrowsContainer {
+    display: flex;
+    justify-content: center; /* Center buttons below slides */
+    gap: 20px; /* Space between buttons */
+    margin-top: 40px; /* Add spacing below carousel */
+    position: absolute !important; /* Override default positioning */
+    left: 50%;
+  }
+
+  .arrowsContainer button{
+    margin-right: 50px;
+  }
+  
+  .vlogs{
+    
+  }
 
 
 @keyframes slide {

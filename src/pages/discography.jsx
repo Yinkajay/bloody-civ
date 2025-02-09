@@ -93,8 +93,8 @@ export default function discography() {
                 >
                     <SplideTrack>
                         {albums.map((album, index) => (
-                            <SplideSlide>
-                                <div key={index} className={discographyStyles.albumCard}>
+                            <SplideSlide key={index}>
+                                <div className={discographyStyles.albumCard}>
                                     <div className="">
                                         <Image src={album.image} width={500} className={discographyStyles.albumImage} alt='anger management' />
                                         <div className={discographyStyles.albumText}>
@@ -135,8 +135,8 @@ export default function discography() {
                 >
                     <SplideTrack>
                         {singlesandFeatures.map((album, index) => (
-                            <SplideSlide>
-                                <div key={index} className={discographyStyles.albumCard}>
+                            <SplideSlide key={index}>
+                                <div className={discographyStyles.albumCard}>
                                     <div className="">
                                         <Image src={album.image} width={500} className={discographyStyles.albumImage} alt='anger management' />
                                         <div className={discographyStyles.albumText}>

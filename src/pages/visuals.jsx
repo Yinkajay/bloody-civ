@@ -1,9 +1,11 @@
 import Image from "next/image";
 
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import "@splidejs/splide/css";
 import visualStyles from './visuals.module.css'
 
-import leftarrow from '../../assets/visuals/leftarrow.svg'
-import rightarrow from '../../assets/visuals/rightarrow.svg'
+import forward from '../../assets/discography/forward.svg'
+import backward from '../../assets/discography/backward.svg'
 import { fetchYouTubeMusicData, fetchYoutubeVlogData } from "@/utils/fetchYoutubeData";
 
 
@@ -40,45 +42,53 @@ export default function visuals({ musicVideos, vlogVideos }) {
 
             <section>
                 <h2>Music Videos</h2>
-                {musicVideos.map(video => (
-                    <div key={video.etag} className={visualStyles.mvCard}>
-                        <div className={visualStyles.titleSlider}>
-                            <p>{video.snippet?.title}</p>
-                            <p>{video.snippet?.title}</p>
-                            <p>{video.snippet?.title}</p>
-                            <p>{video.snippet?.title}</p>
-                            <p>{video.snippet?.title}</p>
-                            <p>{video.snippet?.title}</p>
-                            <p>{video.snippet?.title}</p>
-                            <p>{video.snippet?.title}</p>
-                        </div>
-                        <div className={visualStyles.mvCardVideo}>
-                            <iframe
-                                src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                                title={video.snippet.title}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                            {/* <Image width={1000} height={700} src={video.snippet.thumbnails.high.url} alt="youtube video thumbnail" /> */}
-                        </div>
+                <Splide className={visualStyles.mvCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus: 0 }}
+                >
+                    <SplideTrack>
+                        {musicVideos.map(video => (
+                            <SplideSlide key={video.etag}>
+                                <div className={visualStyles.mvCard}>
+                                    <div className={visualStyles.titleSlider}>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                        <p>{video.snippet?.title}</p>
+                                    </div>
+                                    <div className={visualStyles.mvCardVideo}>
+                                        <iframe
+                                            src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                                            title={video.snippet.title}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                        {/* <Image width={1000} height={700} src={video.snippet.thumbnails.high.url} alt="youtube video thumbnail" /> */}
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                        ))}
+                    </SplideTrack>
+                    <div className={`splide__arrows ${visualStyles.arrowsContainer}`}>
+                        <button className="splide__arrow splide__arrow--next">
+                            <Image width={120} src={backward} />
+                        </button>
+                        <button className="splide__arrow splide__arrow--prev">
+                            <Image width={120} src={forward} />
+                        </button>
                     </div>
-                ))}
+                </Splide>
+
+
                 {/* {vlogVideos.map(video => (
                     <p key={video.etag}>{video?.snippet?.title}</p>
                 ))} */}
             </section>
-            <section>
-                <h1>Vlog & Live</h1>
-                <div className="">
 
-                </div>
-                <div className="">
-                    <Image src={''} alt="" />
-                </div>
-            </section>
-
-            <section>
+            <section className={visualStyles.vlogs}>
                 <h1>Vlog & Live</h1>
                 <div className="">
 
