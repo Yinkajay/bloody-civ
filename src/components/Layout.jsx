@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
             <LoaderScreen />
         ) : (
             <main className={LayoutClasses['main-container']} >
-                {/* <Navbar />   */}
+                <Navbar />  
                 {children}
                 {/* <Footer /> */}
             </main >
