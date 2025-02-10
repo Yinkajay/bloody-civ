@@ -85,7 +85,8 @@
 }
 
 .socials {
-    /* background-color: red; */
+    max-width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,3 +218,29 @@ img:nt .quoteHeadline img:nth-of-type(2) {
 .imageGallery img {
     width: 100%;
 }
+
+@media screen and (max-width:1280px) {
+    .credits article h1 {
+        font-size: 80px;
+    }
+
+    .credits article p {
+        font-size: 30px;
+    }
+
+    
+    
+    .descriptionText {
+        width: 60%;
+        padding-left: 2rem;
+        color: var(--grey-text);
+        /* background-color: aquamarine; */
+        font-size: 30px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+}
+@media screen and (max-width:1000px) {}
+@media screen and (max-width:650px) {}
+@media screen and (max-width:450px) {}
