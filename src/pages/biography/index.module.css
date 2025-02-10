@@ -11,8 +11,6 @@
 
 
 .heroImageArea {
-    /* display: none; */
-    /* background-color: blue; */
     position: relative;
     display: inline-block;
 }
@@ -112,7 +110,6 @@
 
     100% {
         transform: translateX(-100%);
-        /* Move entire width to the left */
     }
 }
 
@@ -152,3 +149,4 @@
     color: #929292;
     font-size: 32px;
 }
+

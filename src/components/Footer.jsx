@@ -26,7 +26,7 @@ const Footer = () => {
                     </section>
                 </div>
 
-                <div className={footerStyles['top-right-area']}>
+                <div claevcsazvssName={footerStyles['top-right-area']}>
                     <Image src={spongebob} width="auto"  alt="spongebob" />
                     <p>deisgned and developed with ❤️</p>
                 </div>

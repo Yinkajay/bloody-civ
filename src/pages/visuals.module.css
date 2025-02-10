@@ -1,0 +1,240 @@
+/* @media screen and (max-width:1280px) {}
+@media screen and (max-width:1000px) {}
+@media screen and (max-width:650px) {}
+@media screen and (max-width:450px) {} */
+
+
+.hero h1 {
+    font-size: 96px;
+}
+
+.hero p {
+    font-size: 40px;
+    width: 500px;
+    color: #929292;
+}
+
+.heroImageArea {
+    position: relative;
+    display: inline-block;
+}
+
+.heroImageArea>img:nth-of-type(2) {
+    position: absolute;
+    right: -40%;
+    top: -6%;
+    animation: pulse 1.8s infinite;
+}
+
+
+.videos h2 {
+    font-size: 70px;
+}
+
+
+
+.mvCard {
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 80px;
+    border: 5px solid;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.mvCardVideo {
+    border-radius: 10px;
+}
+
+.mvCardVideo iframe {
+    width: 100%;
+    height: 800px;
+    border-radius: 60px;
+}
+
+.mvCardVideo img {
+    width: 100%;
+    height: 800px;
+}
+
+
+.visuals {
+    position: relative;
+    border: 5px solid;
+    padding: 0.5rem 0;
+    border-radius: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.titleSlider {
+    margin: 0.5rem 0 2rem 0;
+    display: flex;
+}
+
+.titleSlider p {
+    font-size: 50px;
+    font-weight: bold;
+    border: 3px solid;
+    padding: 6px 12px;
+    border-radius: 50px;
+    white-space: nowrap;
+    animation: slide 10s linear infinite;
+}
+
+.titleSlider::before,
+.titleSlider::after {
+    content: attr(data-repeat);
+}
+
+.arrowsContainer {
+    display: flex;
+    justify-content: center;
+    /* Center buttons below slides */
+    gap: 40px;
+    /* Space between buttons */
+    margin-top: 40px;
+    /* Add spacing below carousel */
+    position: absolute !important;
+    /* Override default positioning */
+    left: 50%;
+}
+
+.arrowsContainer button {
+    margin-right: 50px;
+}
+
+.vlogs {
+    margin: 100px 0;
+}
+
+.vlogs h2 {
+    font-size: 70px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+        /* Start at the beginning */
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media screen and (max-width:1280px) {
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .hero p {
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero p {
+        font-size: 30px;
+    }
+
+    .heroImageArea>img:nth-of-type(1) {
+        width: 420px;
+        height: auto;
+    }
+
+    .heroImageArea>img:nth-of-type(2) {
+        top: -14%;
+        width: 200px;
+        height: auto;
+    }
+
+    .visualsPage h2 {
+        font-size: 65px;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero p {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    .visualsPage h2 {
+        font-size: 50px;
+    }
+
+    .heroImageArea {
+        position: relative;
+        display: inline-block;
+    }
+
+    .heroImageArea>img:nth-of-type(1) {
+        width: 90%;
+        height: auto;
+    }
+
+    .heroImageArea>img:nth-of-type(2) {
+        right: 0%;
+    }
+
+    .titleSlider {
+        margin: 0.5rem 0;
+        display: flex;
+    }
+
+    .titleSlider p {
+        font-size: 25px;
+        font-weight: bold;
+        border: 3px solid;
+        padding: 6px 12px;
+    }
+
+    .mvCard {
+        border-radius: 40px;
+        padding: 0.5rem;
+    }
+
+    .mvCardVideo {
+        border-radius: 10px;
+    }
+
+    .mvCardVideo iframe {
+        width: 100%;
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    .mvCardVideo img {
+        width: 100%;
+        height: 800px;
+    }
+
+    .arrowsContainer {
+        gap: 5px;
+    }
+
+    .arrowsContainer img {
+        width: 80px;
+        height: auto;
+    }
+
+    .arrowsContainer button {
+        margin-right: 20px;
+    }
+
+
+}
+
+@media screen and (max-width:450px) {}

@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   --grey-text: #929292;
+  font-family: sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -50,4 +51,10 @@ main {
 iframe {
   border-radius: 30px;
 
+}
+
+@media screen and (max-width:1280px) {
+  body{
+    padding: 0 1rem;
+  }
 }

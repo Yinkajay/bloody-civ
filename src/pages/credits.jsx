@@ -30,10 +30,10 @@ export default function credits() {
                     <div className={classes.links}>
                         <p>Mojola</p>
                         <Link href=''>
-                            <Image src={twitter} alt='twitter icon' />
+                            <Image className={classes.twitterImg} src={twitter} alt='twitter icon' />
                         </Link>
                         <Link href=''>
-                            <Image src={linkedin} alt='linkedin icon' />
+                            <Image className={classes.linkedinImg} src={linkedin} alt='linkedin icon' />
                         </Link>
                     </div>
                 </div>
@@ -44,10 +44,10 @@ export default function credits() {
                     <div className={classes.links}>
                         <p>Williams</p>
                         <Link href=''>
-                            <Image src={twitter} alt='twitter icon' />
+                            <Image className={classes.twitterImg} src={twitter} alt='twitter icon' />
                         </Link>
                         <Link href=''>
-                            <Image src={linkedin} alt='linkedin icon' />
+                            <Image className={classes.linkedinImg} src={linkedin} alt='linkedin icon' />
                         </Link>
                     </div>
                 </div>
@@ -57,13 +57,12 @@ export default function credits() {
                     <div className={classes.links}>
                         <p>Yinx</p>
                         <Link href=''>
-                            <Image src={twitter} alt='twitter icon' />
+                            <Image className={classes.twitterImg} src={twitter} alt='twitter icon' />
                         </Link>
                         <Link href=''>
-                            <Image src={linkedin} alt='linkedin icon' />
+                            <Image className={classes.linkedinImg} src={linkedin} alt='linkedin icon' />
                         </Link>
                     </div>
-
                 </div>
             </section>
 

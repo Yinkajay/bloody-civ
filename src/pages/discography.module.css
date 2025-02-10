@@ -1,6 +1,14 @@
+.splide__arrow svg {
+    display: none;
+    /* Hides the default arrows */
+}
+
+.discographyHero{
+    margin-bottom: 100px;
+}
+
 .discographyHero h2 {
     font-size: 70px;
-    /* background-color: red; */
 }
 
 .servicesHeader {
@@ -15,32 +23,97 @@
     color: #929292;
 }
 
+.albums h2{
+    font-size: 70px;
+    margin: 30px 0;
+}
+
+.albumsCarousel {
+    /* background-color: red; */
+    margin-bottom: 120px;
+}
 
 .albumCard {
-    max-width: 40rem;
-    width: max-content;
+    /* max-width: 70rem; */
+    width: 100%;
+    /* width: max-content; */
     border: 3px solid;
-    background-color: white;
-    padding: 0.5rem;
-    border-radius: 10px;
+    /* background-color: white; */
+    padding: 3rem;
+    border-radius: 100px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.albumImage{
-    width: 500px; 
-    /* height: 500px; */
+.albumCard>div:first-child {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+.albumText p {
+    width: max-content;
+    padding: 12px;
+    border: 3px solid;
+    border-radius: 80px;
+}
+
+.albumText h1 {
+    font-size: 70px;
+}
+
+.albumYear {
+    display: flex;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.albumCard>div:nth-last-child(1) img {
+    width: 80px;
+    height: auto;
+    margin-right: 24px;
+}
+
+.albumImage {
+    /* width: 500px; */
+    /* height: auto;    */
     margin: 0;
-
 }
 
-.albumText{
+.albumText {
     width: max-content;
 }
 
 .headphonesImage {
     position: absolute;
-    display: none;
-    width: 100px;
-    left: 0;
-    top: 0;
+    /* display: none; */
+    width: 350px;
+    right: 20%;
+    top: -50px;
 }
+
+  .arrowsContainer {
+    display: flex;
+    justify-content: center; /* Center buttons below slides */
+    gap: 20px; /* Space between buttons */
+    margin-top: 40px; /* Add spacing below carousel */
+    position: absolute !important; /* Override default positioning */
+    left: 50%;
+  }
+
+  .arrowsContainer button{
+    margin-right: 50px;
+  }
+  
+
+
+  .singles{
+    margin: 100px 0;
+  }
+
+  .singles h2{
+    font-size: 70px;
+    margin: 30px 0;
+  }

@@ -13,7 +13,7 @@ import Image from 'next/image'
 const Navbar = () => {
     const router = useRouter()
 
-    console.log(router)
+    // console.log(router)
     return (
         <nav className={navClasses['main-nav']}>
             <Link href='/playground'>
