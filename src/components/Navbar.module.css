@@ -1,21 +1,14 @@
 .main-nav {
     background-color: purple;
     background: #EFEFEF;
-    /* height: 70px; */
     display: flex;
     align-items: center;
     margin: 0 -2rem;
     padding: 2rem;
 }
 
-.main-nav li {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.main-nav li img{
+.main-nav li img {
     margin-right: 10px;
 }
 
@@ -24,7 +17,13 @@
     background-color: #222222;
     color: white;
     text-decoration: line-through;
-}   
+}
+.main-nav li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .main-nav li {
     padding: 10px;
@@ -54,4 +53,26 @@
 .main-nav li:hover {
     color: gray;
     background-color: black;
+}
+
+@media (max-width: 480px) {
+
+    .main-nav{
+        justify-content: center;
+    }
+    .main-nav{
+        padding: 1rem;
+    }
+
+    .main-nav li {
+        font-size: 12px;
+        min-width: none;
+        padding: 5px;
+    }
+
+    .main-nav li img {
+        margin-right: 5px;
+        width: 10px;
+    }
+    
 }
