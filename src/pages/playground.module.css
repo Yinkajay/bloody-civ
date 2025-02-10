@@ -8,17 +8,14 @@
     margin-top: 2rem;
 }
 
-
 .heroTextArea {
     width: 45%;
-    /* background-color: blue; */
     font-size: 70px;
 }
 
 .heroImageArea {
     position: relative;
     width: 55%;
-    /* background-color: yellow; */
 }
 
 .heroImageArea img {
@@ -94,41 +91,28 @@
 
 .socials img {
     width: 150px;
+    height: auto
 }
 
 .music {
-    /* background-color: purple; */
-    margin-top: 10rem;
+    margin-top: 5rem;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.headphones {
-    /* width: 73px; */
+.musicDesktop2 {
+    display: none;
 }
 
-.volumeknob {
-    position: absolute;
-    bottom: 0;
-    left: 1rem;
-    width: 320px;
-}
-
-
-.randomman {
-    position: absolute;
-    top: 0;
-    right: 2rem;
+.musicDesktop {
+    width: 100%;
+    height: auto;
 }
 
 .quote {
-    /* background-color: yellow; */
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
-.quote h1 {
+.quote h2 {
     font-size: 100px;
 }
 
@@ -150,14 +134,6 @@
     z-index: -1;
 }
 
-.quoteHeadline img:nth-of-type(1) {
-    top: -65px;
-}
-
-img:nt .quoteHeadline img:nth-of-type(2) {
-    /* right: 10px; */
-    top: -400px;
-}
 
 .actualQuote {
     /* background-color: red; */
@@ -170,9 +146,14 @@ img:nt .quoteHeadline img:nth-of-type(2) {
     margin: 1rem 0;
 }
 
-.media {}
+.media div {
+    display: flex;
+    justify-content: end;
+    position: relative
+}
 
-.media h1 {
+.media h2 {
+    padding: 12px 0;
     text-align: center;
     font-size: 100px;
     position: relative;
@@ -180,46 +161,39 @@ img:nt .quoteHeadline img:nth-of-type(2) {
 }
 
 .media img {
+    z-index: 999;
     width: 30%;
+    right: 55%;
+    position: absolute;
 }
 
 .iframeContainer {
+    z-index: 500;
     position: relative;
     width: 70%;
     height: 650px;
 }
 
 .imageGallery {
-    background-color: red;
-}
-
-.imageGallery .firstRow {
-    display: flex;
-}
-
-.imageGallery .firstRow img:nth-of-type(1) {
-    /* display: none; */
-    /* flex: 1; */
-    width: 20%;
-}
-
-.imageGallery .firstRow img:nth-of-type(2) {
-    /* display: none; */
-    /* flex: 3; */
-    width: 60%;
-}
-
-.imageGallery .firstRow img:nth-of-type(3) {
-    /* display: none; */
-    /* flex: 1; */
-    width: 20%;
+    margin: 0 auto;
 }
 
 .imageGallery img {
     width: 100%;
+    height: auto;
+}
+
+.imageGallery img:nth-of-type(2) {
+    display: none;
 }
 
 @media screen and (max-width:1280px) {
+
+    .hero {
+        margin-right: -1rem;
+    }
+
+
     .credits article h1 {
         font-size: 80px;
     }
@@ -228,8 +202,6 @@ img:nt .quoteHeadline img:nth-of-type(2) {
         font-size: 30px;
     }
 
-    
-    
     .descriptionText {
         width: 60%;
         padding-left: 2rem;
@@ -240,7 +212,245 @@ img:nt .quoteHeadline img:nth-of-type(2) {
         align-items: flex-end;
     }
 
+    .iframeContainer {
+        position: relative;
+        width: 70%;
+        height: 570px;
+    }
+
+    .quoteHeadline img {
+        right: 100px;
+    }
+
+    .quoteHeadline img:nth-of-type(1) {
+        width: 220px;
+        height: auto;
+    }
+
+    .quoteHeadline img:nth-of-type(2) {
+        width: 160px;
+        height: auto;
+    }
+
 }
-@media screen and (max-width:1000px) {}
-@media screen and (max-width:650px) {}
+
+@media screen and (max-width:1000px) {
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .heroTextArea {
+        z-index: 999;
+    }
+
+    .heroImageArea {
+        z-index: 4;
+    }
+
+    .playground h2 {
+        font-size: 60px;
+    }
+
+    .descriptionHeading {
+        width: 50%;
+    }
+
+    .descriptionText {
+        width: 50%;
+    }
+
+    .descriptionText p {
+        font-size: 25px;
+    }
+
+    .socials img {
+        width: 100px;
+    }
+
+    .quote {
+        margin-top: 10rem;
+    }
+
+    .quote p {
+        font-size: 30px;
+    }
+
+    .quoteHeadline {
+        position: relative;
+        /* background-color: lightblue; */
+        text-align: center;
+    }
+
+    .quoteHeadline img {
+        position: absolute;
+        top: 0;
+        right: 10%;
+        z-index: -1;
+    }
+
+    /* .quoteHeadline img:nth-of-type(1) {
+        top: -65px;
+    } */
+
+    .quoteHeadline img:nth-of-type(1) {
+        width: 160px;
+        height: auto;
+    }
+
+    .quoteHeadline img:nth-of-type(2) {
+        width: 120px;
+        height: auto;
+    }
+
+
+    .actualQuote {
+        width: 80%;
+        margin: 10rem auto 5rem;
+    }
+
+    .actualQuote img {
+        margin: 1rem 0;
+    }
+
+    .media h2 {
+        text-align: center;
+    }
+
+
+    .media h2 {
+        right: 0px;
+    }
+
+    .media img {
+        z-index: 999;
+        width: 30%;
+        right: 75%;
+        position: absolute;
+    }
+
+    .iframeContainer {
+        z-index: 500;
+        position: relative;
+        width: 70%;
+        height: 650px;
+    }
+
+    .media iframe {
+        width: 90%;
+        height: 500px;
+    }
+
+
+}
+
+@media screen and (max-width:650px) {
+
+    .musicDesktop {
+        display: none;
+    }
+
+    .musicDesktop2 {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .imageGallery img:nth-of-type(1) {
+        display: none;
+    }
+
+    .imageGallery img:nth-of-type(2) {
+        display: block;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4px;
+    }
+
+    .heroTextArea {
+        width: 100%;
+    }
+
+    .heroImageArea {
+        position: relative;
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    .heroImageArea img {
+        width: 95%;
+        height: auto;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descriptionHeading {
+        width: 100%;
+    }
+
+    .descriptionText {
+        width: 85%;
+        padding-left: 0;
+    }
+
+    .playground h2 {
+        font-size: 38px;
+    }
+
+    .descriptionText p {
+        margin-top: 2rem;
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .socials img {
+        width: 60px;
+    }
+
+    .music {
+        margin-top: 2rem;
+    }
+
+    .quote {
+        margin-top: 8rem;
+    }
+
+    .quote p {
+        font-size: 22px;
+    }
+
+    .quoteHeadline {
+        position: relative;
+    }
+
+    .quoteHeadline img {
+        position: absolute;
+        top: 0;
+        right: 200px;
+        z-index: -1;
+    }
+
+    
+
+    .quoteHeadline img:nth-of-type(1) {
+        top: -65px;
+    }
+
+
+    .actualQuote {
+        width: 80%;
+        margin: 10rem auto 5rem;
+    }
+
+    .actualQuote img {
+        margin: 1rem 0;
+    }
+
+}
+
 @media screen and (max-width:450px) {}

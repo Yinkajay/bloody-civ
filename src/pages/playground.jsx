@@ -27,7 +27,11 @@ import BloodyRed from '../../assets/playground/BloodyRed.svg'
 import BloodyClones from '../../assets/playground/BloodyGuitarClone.svg'
 
 
+import collage1 from '../../assets/playground/collage1.svg'
+import collage2 from '../../assets/playground/collage2.svg'
 
+import musicImg from '../../assets/playground/musicImg.svg'
+import musicImg2 from '../../assets/playground/musicImg2.svg'
 
 
 import imageDummy from '../../assets/playground/imagedummy.svg'
@@ -56,7 +60,6 @@ export default function playground() {
               }}
             />
           </h1>
-          {/* <h1>Making Beats, Barz, and Beatingss</h1> */}
         </div>
         <div className={classes.heroImageArea}>
           <Image src={heroImage} width="auto" alt='hero-img' />
@@ -117,16 +120,15 @@ export default function playground() {
 
       {/* Music */}
       <section className={classes.music}>
-        <Image src={VolumeImage} className={classes.volumeknob} alt='volume-knob' />
-        <Image src={headphonesImage} className={classes.headphones} alt='headphones' />
-        <Image src={randomguyImage} className={classes.randomman} alt='random man' />
+        <Image className={classes.musicDesktop} wid src={musicImg} />
+        <Image className={classes.musicDesktop2} src={musicImg2} />
       </section>
 
 
       {/* Quotes */}
       <article className={classes.quote}>
         <section className={classes.quoteHeadline}>
-          <h1>&quot;In Her Words&quot;</h1>
+          <h2>&quot;In Her Words&quot;</h2>
           <Image src={QuoteBubble} alt='text bubble' />
           <Image src={BloodyCar} alt='bloody civ' />
         </section>
@@ -138,7 +140,7 @@ export default function playground() {
 
       {/* Media Section */}
       <article className={classes.media}>
-        <h1>See for yourself..</h1>
+        <h2>See for yourself..</h2>
         <div className="">
           <Image src={imageDummy} alt='image-placeholder' />
           <iframe
@@ -155,14 +157,8 @@ export default function playground() {
 
       {/* Image Gallery */}
       <section className={classes.imageGallery}>
-        <div className={classes.firstRow}>
-          <Image src={RopePic1} alt='bloody civ holding a rope' />
-          <Image src={BloodyRed} alt='3 people standing' />
-          <Image src={RopePic2} alt='bloody civ holding a rope' />
-        </div>
-        {/* <div className=""> */}
-        <Image src={BloodyClones} alt='bloody holding a guitar' />
-        {/* </div> */}
+        <Image src={collage1} />
+        <Image src={collage2} />
       </section>
 
 
