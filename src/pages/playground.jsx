@@ -128,9 +128,16 @@ export default function playground() {
       {/* Quotes */}
       <article className={classes.quote}>
         <section className={classes.quoteHeadline}>
-          <h2>&quot;In Her Words&quot;</h2>
+          {/* <h2>&quot;In Her Words&quot;</h2>
           <Image src={QuoteBubble} alt='text bubble' />
-          <Image src={BloodyCar} alt='bloody civ' />
+          <Image src={BloodyCar} alt='bloody civ' /> */}
+          <h2 className={classes.headline}>
+            <span>"In Her Words"</span>
+            <span className={classes.imageContainer}>
+              <Image src={QuoteBubble} alt="text bubble" />
+              <Image src={BloodyCar} alt="bloody civ" />
+            </span>
+          </h2>
         </section>
         <section className={classes.actualQuote}>
           <p>“I love writing stories and telling stories and sharing what is on my mind without consequences”</p>
