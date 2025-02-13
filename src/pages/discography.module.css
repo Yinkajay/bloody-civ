@@ -1,14 +1,13 @@
 .splide__arrow svg {
     display: none;
-    /* Hides the default arrows */
 }
 
-.discographyHero{
+.discographyHero {
     margin-bottom: 100px;
 }
 
 .discographyHero h2 {
-    font-size: 70px;
+    font-size: 80px;
 }
 
 .servicesHeader {
@@ -23,7 +22,19 @@
     color: #929292;
 }
 
-.albums h2{
+.heroImageArea {
+    position: relative;
+    display: inline-block;
+}
+
+.heroImageArea>img:nth-of-type(2) {
+    position: absolute;
+    right: -40%;
+    top: -6%;
+    animation: pulse 1.8s infinite;
+}
+
+.albums h2 {
     font-size: 70px;
     margin: 30px 0;
 }
@@ -94,26 +105,90 @@
     top: -50px;
 }
 
-  .arrowsContainer {
+.arrowsContainer {
     display: flex;
-    justify-content: center; /* Center buttons below slides */
-    gap: 20px; /* Space between buttons */
-    margin-top: 40px; /* Add spacing below carousel */
-    position: absolute !important; /* Override default positioning */
+    justify-content: center;
+    /* Center buttons below slides */
+    gap: 20px;
+    /* Space between buttons */
+    margin-top: 40px;
+    /* Add spacing below carousel */
+    position: absolute !important;
+    /* Override default positioning */
     left: 50%;
-  }
+}
 
-  .arrowsContainer button{
+.arrowsContainer button {
     margin-right: 50px;
-  }
-  
+}
 
-
-  .singles{
+.singles {
     margin: 100px 0;
-  }
+}
 
-  .singles h2{
+.singles h2 {
     font-size: 70px;
     margin: 30px 0;
-  }
+}
+
+@media screen and (max-width:1280px) {
+    .discographyHero h2{
+        font-size: 70px;
+    }
+    .discographyHero p{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .heroImageArea>img:nth-of-type(1) {
+        width: 420px;
+        height: auto;
+    }
+
+    .heroImageArea>img:nth-of-type(2) {
+        top: -14%;
+        width: 200px;
+        height: auto;
+    }
+
+    .servicesHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .servicesHeader div{
+        padding: 8px 0  ;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .servicesHeader img{
+        width: 80px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .discographyHero h2{
+        font-size: 60px;
+    }
+    .heroImageArea {
+        position: relative;
+        display: inline-block;
+    }
+
+    .heroImageArea>img:nth-of-type(1) {
+        width: 90%;
+        height: auto;
+    }
+
+    .heroImageArea>img:nth-of-type(2) {
+        width: 130px;
+        right: 0%;
+    }
+}
+
+@media screen and (max-width:450px) {}

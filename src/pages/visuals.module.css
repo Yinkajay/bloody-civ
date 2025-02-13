@@ -186,6 +186,7 @@
     }
 
     .heroImageArea>img:nth-of-type(2) {
+        width: 130px;
         right: 0%;
     }
 
