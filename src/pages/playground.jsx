@@ -132,7 +132,7 @@ export default function playground() {
           <Image src={QuoteBubble} alt='text bubble' />
           <Image src={BloodyCar} alt='bloody civ' /> */}
           <h2 className={classes.headline}>
-            <span>"In Her Words"</span>
+            <span>&quot;In Her Words&quot;</span>
             <span className={classes.imageContainer}>
               <Image src={QuoteBubble} alt="text bubble" />
               <Image src={BloodyCar} alt="bloody civ" />
