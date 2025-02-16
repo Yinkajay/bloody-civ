@@ -3,7 +3,7 @@
 }
 
 .discographyHero {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .discographyHero h2 {
@@ -40,16 +40,12 @@
 }
 
 .albumsCarousel {
-    /* background-color: red; */
     margin-bottom: 120px;
 }
 
 .albumCard {
-    /* max-width: 70rem; */
     width: 100%;
-    /* width: max-content; */
     border: 3px solid;
-    /* background-color: white; */
     padding: 3rem;
     border-radius: 100px;
     position: relative;
@@ -88,8 +84,6 @@
 }
 
 .albumImage {
-    /* width: 500px; */
-    /* height: auto;    */
     margin: 0;
 }
 
@@ -108,13 +102,9 @@
 .arrowsContainer {
     display: flex;
     justify-content: center;
-    /* Center buttons below slides */
     gap: 20px;
-    /* Space between buttons */
     margin-top: 40px;
-    /* Add spacing below carousel */
     position: absolute !important;
-    /* Override default positioning */
     left: 50%;
 }
 
@@ -137,6 +127,54 @@
     }
     .discographyHero p{
         font-size: 35px;
+    }
+
+
+    .albumCard {
+        padding: 1.5rem;
+        gap: 20px;
+    }
+    
+    .albumCard>div:first-child {
+        display: flex;
+        align-items: end;
+        gap: 1rem;
+    }
+    
+    .albumText p {
+        width: max-content;
+        padding: 12px;
+        border: 3px solid;
+        border-radius: 80px;
+    }
+    
+    .albumText h1 {
+        font-size: 65px;
+    }
+    
+    .albumCard>div:nth-last-child(1) img {
+        width: 80px;
+        height: auto;
+        margin-right: 24px;
+    }
+    
+    .albumImage {
+        margin: 0;
+        width: 300px;
+        height: auto;
+    }
+    
+    .albumText {
+        width: max-content;
+    }
+    
+    .headphonesImage {
+        position: absolute;
+        /* display: none; */
+        width: 350px;
+        height: auto;
+        right: 15%;
+        top: -50px;
     }
 }
 
@@ -169,12 +207,59 @@
         width: 80px;
         height: auto;
     }
+    
+    .albumCard {
+        padding: 1.5rem;
+        gap: 20px;
+    }
+    
+    .albumCard>div:first-child {
+        display: flex;
+        align-items: end;
+        gap: 1rem;
+    }
+    
+    .albumText p {
+        width: max-content;
+        font-size: 25px;
+        padding: 8px;
+        border: 3px solid;
+        border-radius: 80px;
+    }
+    
+    .albumText h1 {
+        font-size: 48px;
+        word-break: break-all;
+    }
+    .albumCard>div:nth-last-child(1) img {
+        width: 60px;
+        height: auto;
+        margin-right: 24px;
+    }
+    
+    .albumImage {
+        width: 250px;
+    }
+    
+    .headphonesImage {
+        width: 350px;
+        right: 15%;
+        top: -50px;
+    }
 }
 
 @media screen and (max-width:650px) {
+    .discographyHero{
+        margin-bottom: 30px;
+    }
     .discographyHero h2{
         font-size: 60px;
     }
+
+    .discographyHero p{
+        font-size: 26px;
+    }
+
     .heroImageArea {
         position: relative;
         display: inline-block;
@@ -189,6 +274,134 @@
         width: 130px;
         right: 0%;
     }
+
+    .albums h2 {
+        font-size: 60px;
+        margin: 30px 0;
+    }
+
+    .albumCard {
+        padding: 1rem;
+        gap: 20px;
+        border-radius: 60px;
+    }
+    
+    .albumText p {
+        width: max-content;
+        font-size: 16px;
+        padding: 6px;
+        border: 3px solid;
+        border-radius: 80px;
+    }
+    
+    .albumText h1 {
+        font-size: 32px;
+        word-break: break-all;
+    }
+    
+    .albumCard>div:nth-last-child(1) img {
+        width: 30px;
+        height: auto;
+        margin-right: 24px;
+    }
+    
+    .albumImage {
+        width: 160px;
+    }
+    
+    .headphonesImage {
+        width: 150px;
+        right: 15%;
+        top: -20px;
+    }
+
+    .arrowsContainer {
+        gap: 5px;
+    }
+
+    .arrowsContainer img {
+        width: 80px;
+        height: auto;
+    }
+
+    .arrowsContainer button {
+        margin-right: 20px;
+    }
+
 }
 
-@media screen and (max-width:450px) {}
+@media screen and (max-width:450px) {
+    .servicesHeader div{
+        padding: 8px 0  ;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .servicesHeader img{
+        width: 30px;
+        height: auto;
+    }
+
+.albums h2{
+    font-size: 50px;
+}
+
+.singles h2{
+    font-size: 50px;
+}
+
+    .albumCard>div:first-child {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .albumCard {
+        padding: 8px;
+        gap: 20px;
+        border-radius: 45px;
+    }
+
+    .albumText{
+        width: 100%;
+    }
+    
+    .albumText p {
+        width: max-content;
+        font-size: 16px;
+        padding:    6px;
+        border: 3px solid;
+        border-radius: 80px;
+    }
+    
+    .albumText h1 {
+        padding: 12px 0;
+        font-size: 32px;
+        word-break: break-all;
+    }
+    
+    .albumCard>div:nth-last-child(1) img {
+        width: 30px;
+        height: auto;
+        margin-right: 24px;
+    }
+    
+    .albumImage {
+        width: 190px;
+    }
+    
+    .headphonesImage {
+        right: 10%;
+    }
+    .albumCard>div:nth-last-child(1) img {
+        width: 25px;
+        height: auto;
+        margin-right: 12px;
+    }
+    .albumCard>div:nth-last-child(1){
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -95,7 +95,9 @@ export default function discography() {
 
             <div className={discographyStyles.albums}>
                 <h2>Albums & EPs</h2>
-                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0 }}
+                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0, breakpoints:{
+                    450: {gap: '2rem'}
+                } }}
                 >
                     <SplideTrack>
                         {albums.map((album, index) => (
@@ -137,7 +139,9 @@ export default function discography() {
 
             <div className={discographyStyles.singles}>
                 <h2>Singles & Featuress</h2>
-                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0 }}
+                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0, breakpoints:{
+                    450: {gap: '2rem'}
+                } }}
                 >
                     <SplideTrack>
                         {singlesandFeatures.map((album, index) => (
