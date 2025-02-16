@@ -13,6 +13,9 @@ import Instagram from '../../../assets/biography/Instagram.svg'
 import Twitter from '../../../assets/biography/Twitter.svg'
 import Pencil from '../../../assets/biography/Pencil.svg'
 
+import collage from '../../../assets/biography/collage.svg'
+
+
 import slide1 from '../../../assets/biography/slide1.svg'
 import slide2 from '../../../assets/biography/slide2.webp'
 
@@ -31,7 +34,7 @@ export default function Biography() {
 
 
   return (
-    <section>
+    <section className={BiographyStyles.biography}>
 
       <header className={BiographyStyles.hero}>
         <h2>EMOSEH KHAMOFU, BLOODY CIVILIAN</h2>
@@ -49,8 +52,8 @@ export default function Biography() {
       </div>
 
       <div className={BiographyStyles.randomArea}>
-        <div>
-          <div>
+        <div className={BiographyStyles.randomLeft}>
+          <div className={BiographyStyles.biosocials}>
             <Image src={Youtube} />
             <Image src={Snapchat} />
             <Image src={Instagram} />
@@ -59,7 +62,7 @@ export default function Biography() {
           <Image src={Pencil} />
         </div>
         <div>
-          <Image />
+          <Image src={collage} />
         </div>
       </div>
 

@@ -10,6 +10,44 @@
 }
 
 
+.randomArea {
+    display: flex;
+    gap: 1rem;
+    background-color: turquoise;
+}
+
+.randomLeft {
+    width: 45%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biosocials {
+    display: flex;
+    /* align-items: center; */
+}
+
+.biosocials img {
+    width: 150px;
+    height: auto;
+}
+
+    .randomLeft>img {
+        margin-top: 25%;
+    }
+
+.randomArea>div:nth-of-type(2) {
+    background-color: yellow;
+}
+
+.randomArea>div:nth-of-type(2) img {
+    width: 100%;
+    height: auto;
+}
+
+
 .heroImageArea {
     position: relative;
     display: inline-block;
@@ -46,8 +84,13 @@
     font-size: 40px;
 }
 
+.videoArea {
+    margin: 2rem 0;
+}
+
 .videoArea img {
     width: 100%;
+    height: auto;
 }
 
 .videoArea p {
@@ -66,7 +109,10 @@
 .preVisuals p {
     color: #929292;
     font-size: 32px;
+    margin-bottom: 2rem;
 }
+
+
 
 .visuals {
     position: relative;
@@ -92,7 +138,7 @@
     padding: 6px 12px;
     border-radius: 50px;
     white-space: nowrap;
-    animation: slide 1s linear infinite;
+    animation: slide 2.2s linear infinite;
 }
 
 .visualslider::before,
@@ -114,11 +160,11 @@
 }
 
 .slideshow {
-    border: 3px solid red;
+    /* border: 3px solid red; */
     position: relative;
     width: 90%;
     margin: 0 auto;
-    height:600px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -130,6 +176,8 @@
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    /* border: 3px solid; */
+    border-radius: 50px;
     /* Fade in/out effect */
 }
 
@@ -137,6 +185,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50px;
     /* Adjust to fit the container */
 }
 
@@ -150,3 +199,71 @@
     font-size: 32px;
 }
 
+@media screen and (max-width:1280px) {
+    .biosocials img {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .biosocials img {
+        width: 70px;
+    }
+    .randomLeft>img {
+        width: 200px;
+        height: auto;
+    }
+    .heroImageArea>img:nth-of-type(1) {
+        width: 420px;
+        height: auto;
+    }
+
+    .heroImageArea>img:nth-of-type(2) {
+        top: -14%;
+        width: 200px;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .biosocials{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .heroImageArea>img:nth-of-type(1) {
+        width: 90%;
+        height: auto;
+    }
+
+    .heroImageArea>img:nth-of-type(2) {
+        width: 130px;
+        right: 0%;
+    }
+
+    .biography h2 {
+        font-size: 60px;
+    }
+
+    .biography p{
+        font-size: 30px;
+    }
+
+    .randomArea{
+        flex-direction: column-reverse;
+    }
+
+    .randomLeft{
+        width: 100%;
+    }
+
+    .randomLeft>img {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .biography p{
+        font-size: 22px;
+    }
+}
