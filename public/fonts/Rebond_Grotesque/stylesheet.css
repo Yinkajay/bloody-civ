@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Bold Italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rebond Grotesque';
+    src: url('Rebond Grotesque Light Italic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}

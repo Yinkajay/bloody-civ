@@ -29,10 +29,10 @@ export default function credits() {
                     <Image src={gauntlet} alt='infinity gauntlet' />
                     <div className={classes.links}>
                         <p>Mojola</p>
-                        <Link href=''>
+                        <Link href='https://x.com/themojola'>
                             <Image className={classes.twitterImg} src={twitter} alt='twitter icon' />
                         </Link>
-                        <Link href=''>
+                        <Link href='https://www.linkedin.com/in/themojola'>
                             <Image className={classes.linkedinImg} src={linkedin} alt='linkedin icon' />
                         </Link>
                     </div>
@@ -56,10 +56,10 @@ export default function credits() {
                     <Image src={hammer} alt='thors hammer' />
                     <div className={classes.links}>
                         <p>Yinx</p>
-                        <Link href=''>
+                        <Link href='https://x.com/zeuslgndd'>
                             <Image className={classes.twitterImg} src={twitter} alt='twitter icon' />
                         </Link>
-                        <Link href=''>
+                        <Link href='https://www.linkedin.com/in/yinka-junaid-a9a654171/'>
                             <Image className={classes.linkedinImg} src={linkedin} alt='linkedin icon' />
                         </Link>
                     </div>
