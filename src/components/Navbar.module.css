@@ -88,9 +88,15 @@
     }
 }
 
+@media screen and (max-width:390px) {
+    .main-nav li img {
+        margin-right: 4px;
+        width: 12px;
+    }
+}
+
 @media screen and (max-width:375px) {
     .main-nav li {
-        height: 28px;
         font-size: 10px;
         letter-spacing: 1px;
         min-width: 35px;
@@ -104,9 +110,10 @@
 }
 
 @media screen and (max-width:315px) {
-    .main-nav{
+    .main-nav {
         flex-direction: column;
     }
+
     .main-nav a {
         height: 28px;
         font-size: 10px;
