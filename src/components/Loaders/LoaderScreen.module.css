@@ -3,7 +3,7 @@
     /* background-color: #efefef; */
     max-height: 100%;
     overflow: hidden;
-    margin: 0 -2rem;
+    margin: 0 -1rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@
 }
 
 .loader img {
-    animation: vibrate 1.4s infinite linear;
+    animation: vibrate 1.2s infinite linear;
     margin: 0 auto;
 }
 

@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
             <main className={LayoutClasses['main-container']} >
                 <Navbar />  
                 {children}
-                {/* <Footer /> */}
+                <Footer />
             </main >
         )
     );

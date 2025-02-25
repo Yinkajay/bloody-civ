@@ -490,5 +490,17 @@
         height: 200px;
     }
 
+    .quoteHeadline img:nth-of-type(1) {
+        width: 65px;
+    }
+
+    .quoteHeadline img:nth-of-type(2) {
+        width: 50px;
+    }
+
+    .quoteHeadline img{
+        right: 30px;
+    }
+
 
 }

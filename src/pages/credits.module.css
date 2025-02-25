@@ -18,6 +18,7 @@
     position: relative;
 }
 
+
 .magicians>div {
     border: 6px solid;
     margin: 0 1rem;
@@ -29,6 +30,13 @@
     height: 620px;
     border-radius: 25px;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.magicians>div:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .magicians h1 {
@@ -46,7 +54,13 @@
     position: absolute;
     right: 0;
     top: -360px;
+    /* transition: transform 0.5s ease-in-out; */
     /* border: 5px solid red; */
+}
+
+
+.magicians>img:hover {
+    transform: rotateY(360deg);
 }
 
 .links {
@@ -62,7 +76,8 @@
 }
 
 .tools {
-    margin: 6rem 0;
+    width: max-content;
+    margin: 6rem auto;
     display: flex;
 }
 
@@ -74,6 +89,14 @@
     font-size: 2rem;
     color: #929292;
     width: 650px;
+}
+
+.unbrokenHeading{
+    display: none;
+}
+
+.brokenHeading{
+    display: block;
 }
 
 @media screen and (max-width:1280px) {
@@ -167,7 +190,7 @@
         flex-direction: column;
     }
 
-    .tools h1{
+    .tools h1 {
         font-size: 65px;
     }
 
@@ -179,6 +202,14 @@
         margin: 3rem auto;
         width: 90%;
         height: auto;
+    }
+
+    .unbrokenHeading{
+        display: block;
+    }
+    
+    .brokenHeading{
+        display: none;
     }
 }
 
@@ -197,15 +228,16 @@
         height: 400px;
         border-radius: 15px;
     }
-    .magicians p{
+
+    .magicians p {
         font-size: 18px;
     }
 
-    .twitterImg{
+    .twitterImg {
         width: 20px;
     }
 
-    .linkedinImg{
+    .linkedinImg {
         height: 15px;
     }
 }
@@ -265,11 +297,11 @@
         width: 120px;
     }
 
-    .tools{
+    .tools {
         margin: 3rem 0;
     }
 
-    .tools h1{
+    .tools h1 {
         font-size: 50px;
     }
 

@@ -52,7 +52,8 @@ export default function credits() {
                     </div>
                 </div>
                 <div>
-                    <h1>Development</h1>
+                    <h1 className={classes.unbrokenHeading}>Development</h1>
+                    <h1 className={classes.brokenHeading}>Develop- <br /> ment</h1>
                     <Image src={hammer} alt='thors hammer' />
                     <div className={classes.links}>
                         <p>Yinx</p>
