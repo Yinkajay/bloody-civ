@@ -5,7 +5,7 @@ import "@splidejs/splide/css";
 import visualStyles from './visuals.module.css'
 
 import bioPicture from '../../assets/biography/bioPicture.svg'
-import megaphone from '../../assets/biography/megaphone.svg'
+import visual from '../../assets/visuals/visual.svg'
 
 import forward from '../../assets/discography/forward.svg'
 import backward from '../../assets/discography/backward.svg'
@@ -41,7 +41,7 @@ export default function visuals({ musicVideos, vlogVideos }) {
                 <h1>BLOODY CIVILIAN</h1>
                 <div className={visualStyles.heroImageArea}>
                     <Image src={bioPicture} alt="" />
-                    <Image src={megaphone} alt="" />
+                    <Image src={visual} alt="" />
                 </div>
                 <p>Look so fly in front of the camera</p>
             </section>

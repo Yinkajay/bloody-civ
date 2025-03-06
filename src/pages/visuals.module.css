@@ -17,15 +17,32 @@
 .heroImageArea {
     position: relative;
     display: inline-block;
+    margin: 2rem 0;
 }
 
 .heroImageArea>img:nth-of-type(2) {
     position: absolute;
-    right: -40%;
+    right: -28%;
     top: -6%;
-    animation: pulse 1.8s infinite;
+    /* animation: pulse 2.5s infinite; */
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 .videos h2 {
     font-size: 70px;

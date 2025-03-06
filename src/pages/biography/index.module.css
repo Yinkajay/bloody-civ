@@ -2,9 +2,7 @@
     width: 60%;
     font-size: 70px;
     margin-bottom: 2rem;
-
 }
-
 
 .randomArea {
     display: flex;
@@ -57,9 +55,7 @@
 
     50% {
         transform: scale(1.1);
-        /* Slightly enlarge the image */
         opacity: 0.8;
-        /* Reduce opacity */
     }
 
     100% {
@@ -260,5 +256,13 @@
 @media screen and (max-width:450px) {
     .biography p{
         font-size: 22px;
+    }
+
+    .hero h2{
+        font-size: 40px;
+    }
+
+    .biosocials img {
+        width: 55px;
     }
 }

@@ -68,6 +68,14 @@
     }
 }
 
+@media screen and (max-width:650px) {
+    .main-nav li {
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        padding: 5px;
+    }
+}
+
 @media screen and (max-width:450px) {
     .main-nav {
         padding: 2rem 1rem;

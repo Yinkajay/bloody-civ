@@ -18,6 +18,7 @@ import "@splidejs/splide/css";
 
 import bioPicture from '../../assets/biography/bioPicture.svg'
 import megaphone from '../../assets/biography/megaphone.svg'
+import headsets from '../../assets/discography/headsets.svg'
 
 
 
@@ -88,7 +89,7 @@ export default function discography() {
                 <h2>BLOODY CIVILIAN</h2>
                 <div className={discographyStyles.heroImageArea}>
                     <Image src={bioPicture} alt="" />
-                    <Image src={megaphone} alt="" />
+                    <Image src={headsets} alt="" />
                 </div>
                 <p>One of the best in the game, <br /> don’t believe, play a tape.</p>
             </div>

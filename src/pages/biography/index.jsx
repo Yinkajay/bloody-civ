@@ -37,7 +37,7 @@ export default function Biography() {
     <section className={BiographyStyles.biography}>
 
       <header className={BiographyStyles.hero}>
-        <h2>EMOSEH KHAMOFU, BLOODY CIVILIAN</h2>
+        <h2>EMOSEH <i>KHAMOFU</i>, BLOODY CIVILIAN</h2>
         <div className={BiographyStyles.heroImageArea}>
           <Image src={bioImage} className={BiographyStyles.firstHeroImage} />
           <Image src={megaphone} className={BiographyStyles.secondHeroImage} />
