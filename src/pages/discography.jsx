@@ -1,5 +1,7 @@
 import discographyStyles from './discography.module.css'
 import Image from 'next/image'
+import { motion } from "motion/react"
+import { blurZoom, fadeUp } from '../utils/animationVariants'
 
 import spotify from '../../assets/discography/Spotify.svg'
 import youtube from '../../assets/discography/Youtube.svg'
@@ -17,10 +19,7 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
 import "@splidejs/splide/css";
 
 import bioPicture from '../../assets/biography/bioPicture.svg'
-import megaphone from '../../assets/biography/megaphone.svg'
 import headsets from '../../assets/discography/headsets.svg'
-
-
 
 export default function discography() {
 
@@ -40,45 +39,20 @@ export default function discography() {
     ]
 
     const singlesandFeatures = [
-        {
-            image: AngerManagement,
-            title: 'BLOOD ON THE DANCE FLOOR',
-            year: '2023',
-            links: []
-        },
-        {
-            image: AngerManagement,
-            title: 'Mad Apology',
-            year: '2023',
-            links: []
-        },
-        {
-            image: AngerManagement,
-            title: 'Escapism',
-            year: '2023',
-            links: []
-        },
-        {
-            image: AngerManagement,
-            title: 'How To Kill A Man',
-            year: '2023',
-            links: []
-        },
-        {
-            image: AngerManagement,
-            title: 'Wake Up',
-            year: '2023',
-            links: []
-        },
-
+        { image: AngerManagement, title: 'BLOOD ON THE DANCE FLOOR', year: '2023', links: [] },
+        { image: AngerManagement, title: 'Mad Apology', year: '2023', links: [] },
+        { image: AngerManagement, title: 'Escapism', year: '2023', links: [] },
+        { image: AngerManagement, title: 'How To Kill A Man', year: '2023', links: [] },
+        { image: AngerManagement, title: 'Wake Up', year: '2023', links: [] },
     ]
 
     return (
-        <section>
-            <div className={discographyStyles.discographyHero}>
+        <motion.section variants={blurZoom} initial="initial" animate="animate" exit="exit">
+
+            <motion.div className={discographyStyles.discographyHero} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
                 <div className={discographyStyles.servicesHeader}>
                     <h2>Tapes,</h2>
-                    <div className="">
+                    <div>
                         <Image src={spotify} alt='spotify' />
                         <Image src={youtube} alt='youtube' />
                         <Image src={tidal} alt='tidal' />
@@ -88,23 +62,26 @@ export default function discography() {
                 </div>
                 <h2>BLOODY CIVILIAN</h2>
                 <div className={discographyStyles.heroImageArea}>
-                    <Image src={bioPicture} alt="" />
-                    <Image src={headsets} alt="" />
+                    <Image src={bioPicture} alt="bio" />
+                    <Image src={headsets} alt="headsets" />
                 </div>
                 <p>One of the best in the game, <br /> don’t believe, play a tape.</p>
-            </div>
+            </motion.div>
 
-            <div className={discographyStyles.albums}>
+            <motion.div className={discographyStyles.albums} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
                 <h2>Albums & EPs</h2>
-                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0, breakpoints:{
-                    450: {gap: '2rem'}
-                } }}
-                >
+                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{
+                    perPage: 1.2,
+                    gap: '4rem',
+                    pagination: false,
+                    focus: 0,
+                    breakpoints: { 450: { gap: '2rem' } }
+                }}>
                     <SplideTrack>
                         {albums.map((album, index) => (
                             <SplideSlide key={index}>
                                 <div className={discographyStyles.albumCard}>
-                                    <div className="">
+                                    <div>
                                         <Image src={album.image} width={500} className={discographyStyles.albumImage} alt='anger management' />
                                         <div className={discographyStyles.albumText}>
                                             <div className={discographyStyles.albumYear}>
@@ -115,7 +92,7 @@ export default function discography() {
                                         </div>
                                     </div>
                                     <Image src={headphones} className={discographyStyles.headphonesImage} alt='headphones' />
-                                    <div className="">
+                                    <div>
                                         <Image src={spotify} alt='spotify' />
                                         <Image src={youtube} alt='youtube' />
                                         <Image src={tidal} alt='tidal' />
@@ -129,26 +106,29 @@ export default function discography() {
 
                     <div className={`splide__arrows ${discographyStyles.arrowsContainer}`}>
                         <button className="splide__arrow splide__arrow--next">
-                            <Image width={120} src={backward} />
+                            <Image width={120} src={backward} alt='next' />
                         </button>
                         <button className="splide__arrow splide__arrow--prev">
-                            <Image width={120} src={forward} />
+                            <Image width={120} src={forward} alt='prev' />
                         </button>
                     </div>
                 </Splide>
-            </div>
+            </motion.div>
 
-            <div className={discographyStyles.singles}>
+            <motion.div className={discographyStyles.singles} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
                 <h2>Singles & Featuress</h2>
-                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{ perPage: 1.2, gap: '4rem', pagination: false, focus:0, breakpoints:{
-                    450: {gap: '2rem'}
-                } }}
-                >
+                <Splide className={discographyStyles.albumsCarousel} hasTrack={false} options={{
+                    perPage: 1.2,
+                    gap: '4rem',
+                    pagination: false,
+                    focus: 0,
+                    breakpoints: { 450: { gap: '2rem' } }
+                }}>
                     <SplideTrack>
                         {singlesandFeatures.map((album, index) => (
                             <SplideSlide key={index}>
                                 <div className={discographyStyles.albumCard}>
-                                    <div className="">
+                                    <div>
                                         <Image src={album.image} width={500} className={discographyStyles.albumImage} alt='anger management' />
                                         <div className={discographyStyles.albumText}>
                                             <div className={discographyStyles.albumYear}>
@@ -159,7 +139,7 @@ export default function discography() {
                                         </div>
                                     </div>
                                     <Image src={headphones} className={discographyStyles.headphonesImage} alt='headphones' />
-                                    <div className="">
+                                    <div>
                                         <Image src={spotify} alt='spotify' />
                                         <Image src={youtube} alt='youtube' />
                                         <Image src={tidal} alt='tidal' />
@@ -173,16 +153,15 @@ export default function discography() {
 
                     <div className={`splide__arrows ${discographyStyles.arrowsContainer}`}>
                         <button className="splide__arrow splide__arrow--next">
-                            <Image width={120} src={backward} />
+                            <Image width={120} src={backward} alt='next' />
                         </button>
                         <button className="splide__arrow splide__arrow--prev">
-                            <Image width={120} src={forward} />
+                            <Image width={120} src={forward} alt='prev' />
                         </button>
                     </div>
                 </Splide>
-            </div>
-        </section>
+            </motion.div>
+
+        </motion.section>
     )
 }
-
-

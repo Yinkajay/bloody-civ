@@ -69,7 +69,7 @@
 
 .progressBar {
     height: 10px;
-    animation: fillBar 2.8s linear forwards;
+    animation: fillBar 1.8s linear forwards;
 }
 
 @keyframes fillBar {

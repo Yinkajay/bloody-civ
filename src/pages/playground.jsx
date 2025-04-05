@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import classes from './playground.module.css'
+import { motion } from "motion/react"
 
 import heroImage from '../../assets/playground/hero-img.png'
 
@@ -37,14 +38,41 @@ import musicImg2 from '../../assets/playground/musicImg2.svg'
 import imageDummy from '../../assets/playground/imagedummy.svg'
 import Typewriter from 'typewriter-effect'
 
+
+// const pageVariants = {
+//   initial: { opacity: 0, y: 20 },
+//   animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+//   exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
+// };
+
+const pageVariants = {
+  initial: { opacity: 0, rotate: -3, scale: 0.98 },
+  animate: {
+    opacity: 1,
+    rotate: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] }
+  },
+  exit: {
+    opacity: 0,
+    scale: 1.05,
+    rotate: 2,
+    transition: { duration: 0.4, ease: 'easeInOut' }
+  }
+}
+
+
 export default function playground() {
 
 
   return (
-    <section className={classes.playground}>
+    <motion.section className={classes.playground}  variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit">
 
       {/* Hero Section */}
-      <header className={classes.hero}>
+      <motion.header className={classes.hero} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -30 }} transition={{ duration: 0.7 }}>
         <div className={classes.heroTextArea}>
           <h1>
             Making&nbsp;
@@ -63,7 +91,15 @@ export default function playground() {
         </div>
         <div className={classes.heroImageArea}>
           <Image src={heroImage} width="auto" alt='hero-img' />
-          <div className={`${classes.herocube} ${classes.herocube_1}`}>
+          {[heroCube1, heroCube2, heroCube3, heroCube4].map((cube, index) => (
+            <div
+              key={index}
+              className={`${classes.herocube} ${classes[`herocube_${index + 1}`]}`}
+            >
+              <Image src={cube} alt="hero-img" />
+            </div>
+          ))}
+          {/* <div className={`${classes.herocube} ${classes.herocube_1}`}>
             <Image src={heroCube1} alt="hero-img" />
           </div>
           <div className={`${classes.herocube} ${classes.herocube_2}`}>
@@ -74,12 +110,12 @@ export default function playground() {
           </div>
           <div className={`${classes.herocube} ${classes.herocube_4}`}>
             <Image src={heroCube4} alt="hero-img" />
-          </div>
+          </div> */}
         </div>
-      </header>
+      </motion.header>
 
       {/* Description */}
-      <article className={classes.description}>
+      <motion.article className={classes.description} initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
         <section className={classes.descriptionHeading}>
           <h2>1M Monthly Listeners &amp; Counting...</h2>
         </section>
@@ -88,10 +124,10 @@ export default function playground() {
             Born and raised in Abuja, Nigeria, Bloody Civilian is a genre-defying singer, whose penchant for storytelling manifests in her authentic, unbridled, and poetic lyricism.
           </p>
         </section>
-      </article>
+      </motion.article>
 
       {/* Links */}
-      <section className={classes.socials}>
+      {/* <section className={classes.socials}>
         <div>
           <Image src={AngMgmtLogo} alt='album-icon' />
         </div>
@@ -116,21 +152,26 @@ export default function playground() {
         <div className="">
           <Image src={InstagramIcon} alt='instagram' />
         </div>
-      </section>
+      </section> */}
+
+      <motion.section className={classes.socials} initial="hidden" whileInView="show" variants={{ show: { transition: { staggerChildren: 0.1 } } }}>
+        {[AngMgmtLogo, YoutubeLogo, GuitarImage, SpotifyIcon, BloodyCar, SnapchatIcon, BloodyPortrait, InstagramIcon].map((icon, i) => (
+          <motion.div key={i} variants={{ hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 } }} whileHover={{ scale: 1.1 }}>
+            <Image src={icon} alt='icon' />
+          </motion.div>
+        ))}
+      </motion.section>
 
       {/* Music */}
-      <section className={classes.music}>
-        <Image className={classes.musicDesktop} wid src={musicImg} />
-        <Image className={classes.musicDesktop2} src={musicImg2} />
-      </section>
+      <motion.section className={classes.music} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
+        <Image className={classes.musicDesktop} src={musicImg} alt='music-img' />
+        <Image className={classes.musicDesktop2} src={musicImg2} alt='music-img2' />
+      </motion.section>
 
 
       {/* Quotes */}
-      <article className={classes.quote}>
+      <motion.article className={classes.quote} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <section className={classes.quoteHeadline}>
-          {/* <h2>&quot;In Her Words&quot;</h2>
-          <Image src={QuoteBubble} alt='text bubble' />
-          <Image src={BloodyCar} alt='bloody civ' /> */}
           <h2 className={classes.headline}>
             <span>&quot;In Her Words&quot;</span>
             <span className={classes.imageContainer}>
@@ -143,33 +184,32 @@ export default function playground() {
           <p>“I love writing stories and telling stories and sharing what is on my mind without consequences”</p>
           <Image src={cryingTyler} alt='tylerthecreator' />
         </section>
-      </article>
+      </motion.article>
 
       {/* Media Section */}
-      <article className={classes.media}>
+      <motion.article className={classes.media} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
         <h2>See for yourself..</h2>
-        <div className="">
+        <div>
           <Image src={imageDummy} alt='image-placeholder' />
           <iframe
             className={classes.iframeContainer}
             src="https://www.youtube.com/embed/dZQ8Y-to83Y"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
-
-      </article>
+      </motion.article>
 
       {/* Image Gallery */}
-      <section className={classes.imageGallery}>
-        <Image src={collage1} />
-        <Image src={collage2} />
-      </section>
+      <motion.section className={classes.imageGallery} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+        <Image src={collage1} alt='collage1' />
+        <Image src={collage2} alt='collage2' />
+      </motion.section>
 
 
-    </section>
+    </motion.section>
   )
 }
 

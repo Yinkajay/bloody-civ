@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/splide/css";
 import visualStyles from './visuals.module.css'
+import {motion} from "motion/react"
+import { fadeUp } from '../utils/animationVariants'
 
 import bioPicture from '../../assets/biography/bioPicture.svg'
 import visual from '../../assets/visuals/visual.svg'
@@ -30,13 +32,36 @@ export async function getStaticProps() {
     };
 }
 
+const pageVariants = {
+    initial: {
+      clipPath: 'inset(100% 0% 0% 0%)',
+      opacity: 0
+    },
+    animate: {
+      clipPath: 'inset(0% 0% 0% 0%)',
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.65, 0, 0.35, 1]
+      }
+    },
+    exit: {
+      clipPath: 'inset(0% 0% 100% 0%)',
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.76, 0, 0.24, 1]
+      }
+    }
+  }
+
 
 export default function visuals({ musicVideos, vlogVideos }) {
     console.log('Music Videos:', musicVideos);
     console.log('Vlog Videos:', vlogVideos);
     return (
-        <section className={visualStyles.visualsPage}>
-            <section className={visualStyles.hero}>
+        <motion.section className={visualStyles.visualsPage} variants={pageVariants} initial="initial" animate="animate" exit="exit">
+            <motion.section className={visualStyles.hero} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
                 <h1>Visuals, <span></span></h1>
                 <h1>BLOODY CIVILIAN</h1>
                 <div className={visualStyles.heroImageArea}>
@@ -44,13 +69,13 @@ export default function visuals({ musicVideos, vlogVideos }) {
                     <Image src={visual} alt="" />
                 </div>
                 <p>Look so fly in front of the camera</p>
-            </section>
+            </motion.section>
 
-            <section className={visualStyles.videos}>
+            <motion.section className={visualStyles.videos} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
                 <h2>Music Videos</h2>
                 <Splide className={visualStyles.mvCarousel} hasTrack={false} options={{ perPage: 1.2, breakpoints: { 650: { perPage: 1 } }, gap: '4rem', pagination: false, focus: 0 }}
                 >
-                    <SplideTrack>
+                    <SplideTrack> 
                         {musicVideos.map(video => (
                             <SplideSlide key={video.etag}>
                                 <div className={visualStyles.mvCard}>
@@ -92,9 +117,9 @@ export default function visuals({ musicVideos, vlogVideos }) {
                 {/* {vlogVideos.map(video => (
                     <p key={video.etag}>{video?.snippet?.title}</p>
                 ))} */}
-            </section>
+            </motion.section>
 
-            <section className={visualStyles.vlogs}>
+            <motion.section className={visualStyles.vlogs} variants={fadeUp}  initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
                 <h2>Vlog & Live</h2>
                 <Splide className={visualStyles.mvCarousel} hasTrack={false} options={{ perPage: 1.2, breakpoints: { 650: { perPage: 1 } }, gap: '4rem', pagination: false, focus: 0 }}
                 >
@@ -116,7 +141,6 @@ export default function visuals({ musicVideos, vlogVideos }) {
                                         <iframe
                                             src={`https://www.youtube.com/embed/${video.id.videoId}`}
                                             title={video.snippet.title}
-                                            frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
                                         ></iframe>
@@ -135,8 +159,8 @@ export default function visuals({ musicVideos, vlogVideos }) {
                         </button>
                     </div>
                 </Splide>
-            </section>
-        </section>
+            </motion.section>
+        </motion.section>
     )
 }
 
